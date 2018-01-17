@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  background: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #3498DB;
+  font-family: 'Josefin Sans';
+  font-size: 2rem;
+}
+
+p,
+a {
+  font-family: 'Open Sans';
+  font-size: 1.3rem;
+}
+
+p {
+  line-height: 2rem;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+}
+
+.site-nav {
+  display: flex;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 999;
+}
+
+.site-nav__list {
+  display: flex;
+}
+
+.site-nav .site-title {
+  font-weight: bold;
+}
+
+.site-nav .nav-item,
+.site-nav .subnav-item {
+  display: block;
+  position: relative;
+  padding: 0.7em;
+  color: #000;
+  font-family: 'Josefin Sans';
+  text-decoration: none;
+  transition: color 100ms ease;
+}
+
+.site-nav .nav-item:hover,
+.site-nav .subnav-item:hover {
+  color: #3498DB;
+}
+
+.site-nav li {
+  position: relative;
+  display: block;
+}
+
+.site-nav li:hover .site-nav__list--sublist {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.site-nav li:hover .nav-item {
+  color: #3498DB;
+}
+
+.site-nav__list--sublist {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  padding: 1em 0;
+  background: #fff;
+  border-radius: 0.5em;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+  z-index: 999;
+  transition: all 120ms ease;
+}
+
+.site-nav__list--sublist .subnav-item {
+  padding: inherit 1em;
+}
+
+.site-hero {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: #3498DB;
+  padding-top: 85px;
+}
+
+.site-hero .middle-container {
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.site-hero .middle-container h1,
+.site-hero .middle-container h3 {
+  color: #fff;
+}
+
+.page-container {
+  width: 80%;
+  margin: auto;
+}
+
+.page-section {
+  padding-top: 100px;
+}
+
+.gallery {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-flow: row;
+}
+
+.gallery__item {
+  display: block;
+  width: 18%;
+  margin: 0.5em;
+}
+
+.gallery__item img {
+  width: 100%;
+  height: auto;
+}
